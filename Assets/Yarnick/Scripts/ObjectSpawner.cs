@@ -8,28 +8,30 @@ public class ObjectSpawner : MonoBehaviour
 
     private PlacementIndicator placementIndicator;
 
-
     void Start()
     {
         placementIndicator = FindObjectOfType<PlacementIndicator>();
 
     }
 
-   void Update()
+    void Update()
     {
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
-        {
-            GameObject obj = Instantiate(objectToSpawn, 
-                placementIndicator.transform.position, placementIndicator.transform.rotation);
-           
-        }
-        
-    } 
+      //  if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+      //  {
+           // dragonpos();
+       // }
+    }
 
     public void Activate() {
 
         GameObject obj = Instantiate(objectToSpawn,
                 placementIndicator.transform.position, placementIndicator.transform.rotation);
+
+    }
+    public void dragonpos(){
+
+        GameObject obj = Instantiate(objectToSpawn,
+        placementIndicator.transform.position, placementIndicator.transform.rotation);
 
     }
     
